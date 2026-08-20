@@ -1,5 +1,3 @@
-// Datos ficticios (mock data) de la tienda de videojuegos.
-
 const data = [
   {
     id: 1,
@@ -7,6 +5,10 @@ const data = [
     genero: "Aventura",
     plataforma: "Nintendo Switch",
     lanzamiento: 2023,
+    fechaLanzamiento: "2023-05-12",
+    sinopsis:
+      "Link explora las islas flotantes de Hyrule con nuevos poderes para construir y fusionar objetos.",
+    calificacion: 96,
     precio: 59.99,
     disponible: true,
     progreso: 0.85,
@@ -17,6 +19,10 @@ const data = [
     genero: "RPG de acción",
     plataforma: "PlayStation 5",
     lanzamiento: 2022,
+    fechaLanzamiento: "2022-02-25",
+    sinopsis:
+      "Un mundo abierto oscuro y enorme donde debes reunir los fragmentos del Anillo de Elden.",
+    calificacion: 95,
     precio: 49.99,
     disponible: true,
     progreso: 1,
@@ -27,6 +33,10 @@ const data = [
     genero: "Metroidvania",
     plataforma: "PC",
     lanzamiento: 2025,
+    fechaLanzamiento: "2025-09-04",
+    sinopsis:
+      "Hornet recorre un reino subterráneo hostil con combate ágil y exploración vertical.",
+    calificacion: 90,
     precio: 19.99,
     disponible: false,
     progreso: 0.35,
@@ -37,6 +47,10 @@ const data = [
     genero: "RPG por turnos",
     plataforma: "PC",
     lanzamiento: 2023,
+    fechaLanzamiento: "2023-08-03",
+    sinopsis:
+      "Aventura de rol basada en Dungeons & Dragons donde cada decisión cambia la historia.",
+    calificacion: 96,
     precio: 59.99,
     disponible: true,
     progreso: 0.6,
@@ -47,6 +61,10 @@ const data = [
     genero: "Acción",
     plataforma: "PlayStation 5",
     lanzamiento: 2023,
+    fechaLanzamiento: "2023-10-20",
+    sinopsis:
+      "Peter Parker y Miles Morales protegen Nueva York enfrentando a Venom y a Kraven.",
+    calificacion: 90,
     precio: 69.99,
     disponible: false,
     progreso: 0.12,
@@ -57,6 +75,10 @@ const data = [
     genero: "Carreras",
     plataforma: "Xbox Series X",
     lanzamiento: 2021,
+    fechaLanzamiento: "2021-11-09",
+    sinopsis:
+      "Festival de carreras en mundo abierto ambientado en distintos paisajes de México.",
+    calificacion: 92,
     precio: 39.99,
     disponible: true,
     progreso: 0.98,
