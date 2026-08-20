@@ -1,8 +1,8 @@
+import { Link } from "react-router-dom";
 import "./TablaVideojuegos.css";
 
-// Componente de presentación: solo recibe datos por props y los muestra.
-// La prop "juegos" es el array que llega desde App.jsx.
-function TablaVideojuegos({ juegos }) {
+// Ahora recibe dos props: la lista y la función para eliminar.
+function TablaVideojuegos({ juegos, onEliminar }) {
   return (
     <div className="tabla-contenedor">
       <table className="tabla-videojuegos">
@@ -15,6 +15,7 @@ function TablaVideojuegos({ juegos }) {
             <th>Precio</th>
             <th>Disponible</th>
             <th>Descarga</th>
+            <th>Acciones</th>
           </tr>
         </thead>
 
@@ -29,11 +30,7 @@ function TablaVideojuegos({ juegos }) {
               <td data-label="Lanzamiento">{juego.lanzamiento}</td>
               <td data-label="Precio">${juego.precio.toFixed(2)}</td>
               <td data-label="Disponible">
-                <span
-                  className={
-                    juego.disponible ? "etiqueta si" : "etiqueta no"
-                  }
-                >
+                <span className={juego.disponible ? "etiqueta si" : "etiqueta no"}>
                   {juego.disponible ? "En stock" : "Agotado"}
                 </span>
               </td>
@@ -46,10 +43,36 @@ function TablaVideojuegos({ juegos }) {
                   </span>
                 </div>
               </td>
+
+              <td data-label="Acciones">
+                <div className="botones">
+
+                  <Link
+                    to="/formulario"
+                    state={{ juego }}
+                    className="btn btn-editar"
+                  >
+                    Editar
+                  </Link>
+
+                  <button
+                    className="btn btn-eliminar"
+                    onClick={() => onEliminar(juego.id)}
+                  >
+                    Eliminar
+                  </button>
+                </div>
+              </td>
             </tr>
           ))}
         </tbody>
       </table>
+
+      {juegos.length === 0 && (
+        <p style={{ textAlign: "center", color: "#6b7280", padding: "20px" }}>
+          No hay videojuegos registrados. Agrega uno desde "Nuevo Juego".
+        </p>
+      )}
     </div>
   );
 }

@@ -1,0 +1,71 @@
+.formulario {
+  max-width: 460px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.formulario h1 {
+  font-size: 20px;
+  margin: 0 0 4px 0;
+}
+
+.formulario label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.formulario input[type="text"],
+.formulario input[type="number"],
+.formulario select {
+  padding: 9px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.formulario label.checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.formulario input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.acciones {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.acciones button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-guardar {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.btn-cancelar {
+  background-color: #e5e7eb;
+  color: #374151;
+}

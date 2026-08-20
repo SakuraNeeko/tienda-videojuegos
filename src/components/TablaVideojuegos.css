@@ -28,7 +28,7 @@
 }
 
 .tabla-videojuegos tbody tr:hover {
-  background-color: #f3f4f6;
+  background-color: #f9fafb;
 }
 
 .celda-titulo {
@@ -69,7 +69,6 @@
   overflow: hidden;
 }
 
-/* Colores de la barra en Chrome / Edge / Safari */
 .barra-progreso progress::-webkit-progress-bar {
   background-color: #e5e7eb;
   border-radius: 999px;
@@ -80,7 +79,6 @@
   border-radius: 999px;
 }
 
-/* Colores de la barra en Firefox */
 .barra-progreso progress::-moz-progress-bar {
   background-color: #2563eb;
 }
@@ -91,10 +89,34 @@
   min-width: 36px;
 }
 
+/* Botones de acciones */
+.botones {
+  display: flex;
+  gap: 6px;
+}
+
+.btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-editar {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.btn-eliminar {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
 /* ---------- DISEÑO RESPONSIVO ---------- */
-/* En pantallas pequeñas la tabla se convierte en tarjetas apiladas,
-   y cada celda muestra su título usando el atributo data-label. */
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .tabla-videojuegos {
     box-shadow: none;
     background: transparent;
