@@ -1,0 +1,140 @@
+/* src/components/TablaVideojuegos.css */
+
+.tabla-contenedor {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tabla-videojuegos {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.tabla-videojuegos thead {
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+.tabla-videojuegos th,
+.tabla-videojuegos td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tabla-videojuegos tbody tr:hover {
+  background-color: #f3f4f6;
+}
+
+.celda-titulo {
+  font-weight: 600;
+}
+
+/* Etiqueta de disponibilidad */
+.etiqueta {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.etiqueta.si {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.etiqueta.no {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Barra de progreso */
+.barra-progreso {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.barra-progreso progress {
+  width: 100px;
+  height: 10px;
+  border: none;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+/* Colores de la barra en Chrome / Edge / Safari */
+.barra-progreso progress::-webkit-progress-bar {
+  background-color: #e5e7eb;
+  border-radius: 999px;
+}
+
+.barra-progreso progress::-webkit-progress-value {
+  background-color: #2563eb;
+  border-radius: 999px;
+}
+
+/* Colores de la barra en Firefox */
+.barra-progreso progress::-moz-progress-bar {
+  background-color: #2563eb;
+}
+
+.porcentaje {
+  font-size: 12px;
+  color: #4b5563;
+  min-width: 36px;
+}
+
+/* ---------- DISEÑO RESPONSIVO ---------- */
+/* En pantallas pequeñas la tabla se convierte en tarjetas apiladas,
+   y cada celda muestra su título usando el atributo data-label. */
+@media (max-width: 700px) {
+  .tabla-videojuegos {
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .tabla-videojuegos thead {
+    display: none;
+  }
+
+  .tabla-videojuegos tr {
+    display: block;
+    margin-bottom: 14px;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 6px 10px;
+  }
+
+  .tabla-videojuegos td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 4px;
+    border-bottom: 1px solid #f3f4f6;
+  }
+
+  .tabla-videojuegos tr td:last-child {
+    border-bottom: none;
+  }
+
+  .tabla-videojuegos td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #6b7280;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  .celda-titulo {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,66 @@
+// Datos ficticios (mock data) de la tienda de videojuegos.
+
+const data = [
+  {
+    id: 1,
+    titulo: "The Legend of Zelda: Tears of the Kingdom",
+    genero: "Aventura",
+    plataforma: "Nintendo Switch",
+    lanzamiento: 2023,
+    precio: 59.99,
+    disponible: true,
+    progreso: 0.85,
+  },
+  {
+    id: 2,
+    titulo: "Elden Ring",
+    genero: "RPG de acción",
+    plataforma: "PlayStation 5",
+    lanzamiento: 2022,
+    precio: 49.99,
+    disponible: true,
+    progreso: 1,
+  },
+  {
+    id: 3,
+    titulo: "Hollow Knight: Silksong",
+    genero: "Metroidvania",
+    plataforma: "PC",
+    lanzamiento: 2025,
+    precio: 19.99,
+    disponible: false,
+    progreso: 0.35,
+  },
+  {
+    id: 4,
+    titulo: "Baldur's Gate 3",
+    genero: "RPG por turnos",
+    plataforma: "PC",
+    lanzamiento: 2023,
+    precio: 59.99,
+    disponible: true,
+    progreso: 0.6,
+  },
+  {
+    id: 5,
+    titulo: "Marvel's Spider-Man 2",
+    genero: "Acción",
+    plataforma: "PlayStation 5",
+    lanzamiento: 2023,
+    precio: 69.99,
+    disponible: false,
+    progreso: 0.12,
+  },
+  {
+    id: 6,
+    titulo: "Forza Horizon 5",
+    genero: "Carreras",
+    plataforma: "Xbox Series X",
+    lanzamiento: 2021,
+    precio: 39.99,
+    disponible: true,
+    progreso: 0.98,
+  },
+];
+
+export default data;
